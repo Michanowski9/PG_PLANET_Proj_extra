@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PLANET_extra.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Spacing="5" Padding="10,10">
+            <StackLayout
+                Orientation="Horizontal">
+                <Label 
+                    Text="X:" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Entry 
+                    x:Name="InputSizeX"
+                    Placeholder="Enter size"/>
+                <Label 
+                    Text="Y:" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="10,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Entry 
+                    x:Name="InputSizeY"
+                    Placeholder="Enter size"/>
+                <Button 
+                    x:Name="CreateArena" 
+                    Text="Create Area" 
+                    SemanticProperties.Hint="Creates map" 
+                    Clicked="CreateArena_Click"
+                    Margin="10,0,0,0" 
+                    HeightRequest="30"
+                    Padding="10,0,10,0"
+                    HorizontalOptions="Center" />
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label 
+                    Text="Timer:" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Entry 
+                    x:Name="InputTimer"
+                    Placeholder="Enter time"/>
+                <Button 
+                    x:Name="StartButton" 
+                    Text="Start" 
+                    SemanticProperties.Hint="Starts Animation" 
+                    Clicked="Start_Click"
+                    Margin="10,0,0,0" 
+                    HeightRequest="30"
+                    Padding="10,0,10,0"
+                    HorizontalOptions="Center" 
+                    IsEnabled="False"/>
+                <Button 
+                    x:Name="StopButton" 
+                    Text="Stop" 
+                    SemanticProperties.Hint="Stops Animation" 
+                    Clicked="Stop_Click"
+                    Margin="10,0,0,0" 
+                    HeightRequest="30"
+                    Padding="10,0,10,0"
+                    HorizontalOptions="Center"
+                    IsEnabled="False"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Button 
+                    x:Name="PrevFrameButton" 
+                    Text="Prev Frame" 
+                    SemanticProperties.Hint="Starts Animation" 
+                    Clicked="PrevFrame_Click"
+                    Margin="10,0,0,0" 
+                    HeightRequest="30"
+                    Padding="10,0,10,0"
+                    HorizontalOptions="Center"
+                    IsEnabled="False"/>
+                <Button 
+                    x:Name="NextFrameButton" 
+                    Text="Next Frame" 
+                    SemanticProperties.Hint="Stops Animation" 
+                    Clicked="NextFrame_Click"
+                    Margin="10,0,0,0" 
+                    HeightRequest="30"
+                    Padding="10,0,10,0"
+                    HorizontalOptions="Center"
+                    IsEnabled="False"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label 
+                    Text="File:" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Entry 
+                    x:Name="InputFileName"
+                    Placeholder="Enter filename"/>
+                <Button 
+                    x:Name="SaveButton" 
+                    Text="Save" 
+                    SemanticProperties.Hint="Starts Animation" 
+                    Clicked="Save_Click"
+                    Margin="10,0,0,0" 
+                    HeightRequest="30"
+                    Padding="10,0,10,0"
+                    HorizontalOptions="Center"
+                    IsEnabled="False"/>
+                <Button 
+                    x:Name="LoadButton" 
+                    Text="Load" 
+                    SemanticProperties.Hint="Stops Animation" 
+                    Clicked="Load_Click"
+                    Margin="10,0,0,0" 
+                    HeightRequest="30"
+                    Padding="10,0,10,0"
+                    HorizontalOptions="Center" />
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label 
+                    Text="Generation:" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    x:Name="Generation" 
+                    Text="0:" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    Text="Born:" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    x:Name="Born" 
+                    Text="0" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    Text="Dead:" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    x:Name="Dead" 
+                    Text="0" 
+                    SemanticProperties.Description="Level1" 
+                    FontSize="24"
+                    Margin="0,4,0,0" 
+                    HorizontalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout>
+                <Grid 
+                    x:Name="Arena" 
+                    BackgroundColor="Green"
+                    Padding="0,0,0,0"></Grid>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
